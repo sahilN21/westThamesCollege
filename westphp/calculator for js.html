@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <h1> CALCULATOR</h1>
+    </head>
+<body>
+    <form action ="" method = "post" onsubmit ="return checknum(), calculate()">
+        <label for ="num1">enter a number</label>
+        <input type = "int" id="num1" plachodler=" enter a number...">
+        <label for ="num2">enter another number</label>
+        <input type = "int" id="num2" plachodler=" enter a second number...">
+        <input type = "radio" id ="radio1">
+        <select id ="radio1">
+            <option value ="add">add</option>
+            <option value ="subtract">subtract</option>
+            <option value ="divide">divide</option>
+            <option value ="multiply">multiply</option>
+        </select>
+        <button type ="submit">submit</button>
+    <script>
+        function checknum(){
+        if (num1 != int){
+            alert("your values should be an integer")
+        }
+    }
+    function calculate(){
+        if( radio1 == "add"){
+            num1 + num2;
+        } else if (radio1 =="subtract"){
+            num1 - num2;
+        }else if (radio1=="divide"){
+            num1/num2;
+        }else{
+            num1*num2;
+        }
+
+    }
+  </script>
+
+
+    </form>
+
+</body>
+</html>

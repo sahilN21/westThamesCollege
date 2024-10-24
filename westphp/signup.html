@@ -1,0 +1,55 @@
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" cotent="IE=edge">
+    <meta name ="viewport" content ="width=device-widdth, initial-scale=1.0">
+    <link rel ="stylesheet" href="login.css">
+
+
+</head>
+<body>
+
+<h1> Create account ...</h1>
+<br>
+<body>
+    <div class ="container">
+        <form action ="username&p-database.php" method = "post" onsubmit="return checkPassword()">
+            <label for = "username">username</label>
+            <br>
+            <input type ="text" id="username" name="username" placeholder="username...">
+            <br>
+            <label for = "password">password</label>
+            <br>
+            <input type ="text" id="password" name="password" placeholder="password...">
+            <br>
+            <label for = "ConPassword">ConfirmPassword</label>
+            <br>
+            <input type ="text" name= "Conpassword" id= "Conpassword" placeholder = "ConfrimPasssword...">
+            <br>
+            <label for = "email">email</label>
+            <br>
+            <input type ="text" id="email" name="email" placeholder="email...">
+            <br>
+            <button type ="submit">submit</button>
+      </form>
+    <script>
+        function checkPassword(){
+            var password = document.getElementById("password").value;
+            var Conpassword = document.getElementById("Conpassword").value;
+
+            if (password != Conpassword) {
+                alert("password does not match. please try again");
+                return false;
+             } else if (password.length<10){
+                alert("password needs to be at least 10 charecters long");
+                return false;
+             }
+              }
+     </script>
+<br>
+<button onclick="location.href='login_info.html';">Go to Log In Page</button>
+
+
+
